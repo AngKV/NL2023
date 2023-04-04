@@ -48,8 +48,12 @@
 <?php
 
     if (isset($_POST['submit'])) {
-        $username =$_POST['username'];
-        $password = md5($_POST['password']);
+        //$username = $_POST['username'];
+        //$password = md5($_POST['password']);
+        $a= md5($_POST['password']);
+
+        $username =mysqli_real_escape_string($conn, $_POST['username']);
+        $password =mysqli_real_escape_string($conn, $a);
 
         $sql="SELECT * from tbl_admin where username='$username' and password='$password'";
 

@@ -6,7 +6,8 @@
     <section class="food-search text-center">
         <div class="container">
             <?php
-                $search= $_POST['search'];
+                //$search= $_POST['search'];
+                $search=mysqli_real_escape_string($conn, $_POST['search']);
 
             ?>
             
