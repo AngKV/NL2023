@@ -1,8 +1,4 @@
-/* 
-    Author: Vijay Thapa;
-    Theme: Restaurant Food Order;
-    version: 1.0;
-*/
+
 
 /* CSS for All */
 *{
@@ -200,6 +196,17 @@ fieldset{
     font-weight: bold;
 }
 
+.success{
+    text-align: center;
+    padding: 2%;
+    color: green;
+}
+
+.error{
+    text-align: center; 
+    padding: 2%;
+    color: red;
+}
 
 
 /* CSS for Mobile Size or Smaller Screen */

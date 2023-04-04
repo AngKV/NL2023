@@ -12,7 +12,7 @@
         $category_title= $row1['title'];
     }
     else {
-        header('loation:'.SITEURL.);
+        header('loation:'.SITEURL);
     }
 ?>
 
@@ -42,6 +42,7 @@
 
                 if ($count>0) {
                     while ($row= mysqli_fetch_assoc($res)) {
+                        $id= $row['id'];
                         $title= $row['title'];
                         $price= $row['price'];
                         $description= $row['description'];
@@ -71,7 +72,7 @@
                                 </p>
                                 <br>
 
-                                <a href="#" class="btn btn-primary">Order Now</a>
+                                <a href="<?php echo SITEURL;?>order.php?food_id=<?php echo $id;?>" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
                         <?php
