@@ -7,6 +7,7 @@
         <div class="container">
             <?php
                 $search= $_POST['search'];
+
             ?>
             
             <h2>Foods on Your Search <a href="#" class="text-white"><?php echo $search;?></a></h2>
@@ -25,7 +26,7 @@
             <?php
                 $search = $_POST['search'];
 
-                $sql= "SELECT * from tbl_food where $title like '%$search%'
+                $sql= "SELECT * from tbl_food where title like '%$search%'
                 or description like '%$search%'";
 
                 $res= mysqli_query($conn, $sql);

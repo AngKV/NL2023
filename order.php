@@ -21,7 +21,7 @@
             
         }
         else {
-            header('location:'.SITEURL;);
+            header('location:'.SITEURL);
         }
     ?>
 
@@ -57,7 +57,7 @@
                         <input type="hidden" name="price" value="<?php echo $price;?>">
                         
                         <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                        <input type="number" name="qty" class="input-responsive" value="0" required>
                         
                     </div>
 
@@ -100,7 +100,7 @@
                     $sql1= "INSERT into tbl_orders set
                         food= '$food',
                         price= '$price',
-                        quantity= '$quantity',
+                        quantity= $quantity,
                         total= '$total',
                         order_date= '$order_date',
                         status= '$status',
